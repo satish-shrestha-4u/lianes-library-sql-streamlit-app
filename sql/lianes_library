@@ -1,0 +1,14 @@
+# Liane's Library SQL Files
+
+This folder contains the SQL files directly related to the Liane's Library database.
+
+## Files
+
+- `01_database_schema.sql` — creates the database structure and tables
+- `02_seed_sample_data.sql` — inserts sample data into the tables
+
+## Purpose
+
+These files define the database used by the Python connection and Streamlit app.
+
+They support the library management workflow, including books, friends, and borrowing records.
