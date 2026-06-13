@@ -1,4 +1,4 @@
-# Liane's Library Advanced SQL, Python and Streamlit App
+# 📚 Liane's Library Advanced SQL, Python and Streamlit App
 
 This project demonstrates a full SQL-to-application workflow using a library management case study.
 
