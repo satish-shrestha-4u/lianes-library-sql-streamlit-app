@@ -70,12 +70,11 @@ Streamlit web application
 ## 📁 Repository Structure
 
 ```text
-sql/              SQL schema, sample data, and query files
-python/           Python scripts for SQL connection and query execution
-app/              Streamlit application files
+sql/              SQL schema, sample data, and advanced SQL practice files
+src/              Streamlit application files
 notebooks/        SQL and Python connection notebooks
-images/           Screenshots and supporting visuals
-documentation/    Setup notes and project documentation
+.gitignore        Files excluded from GitHub, including secrets
+requirements.txt  Python package requirements
 ```
 
 ## 🧩 Project Components
@@ -109,17 +108,16 @@ Create a MySQL database and run the SQL files in the `sql/lianes_library/` folde
 01_database_schema.sql
 02_seed_sample_data.sql
 ```
-### 4️⃣ Create a `.env` file
-Create a `.env` file in the project root and add your database credentials:
+### 4️⃣ Create a Streamlit secrets file
+Create a `.streamlit/secrets.toml` file in the project root:
+
 ```text
-DB_USER=your_username
-DB_PASSWORD=your_password
-DB_HOST=localhost
-DB_NAME=your_database_name
+.streamlit/secrets.toml
 ```
+
 ### 5️⃣ Run the Streamlit app
 ```bash
-streamlit run app/streamlit_app.py
+streamlit run src/app.py
 ```
 
 ## ✅ Purpose
