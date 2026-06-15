@@ -66,6 +66,7 @@ Streamlit web application
 - 🐼 Pandas - data manipulation
 - 🔗 SQLAlchemy - database connection
 - 🌐 Streamlit - web interface
+- 🔌 PyMySQL — MySQL driver for Python
 
 ## 📁 Repository Structure
 
@@ -105,8 +106,8 @@ conda activate lianes-library-env
 ### 3️⃣ Set up the MySQL database
 Create a MySQL database and run the SQL files in the `sql/lianes_library/` folder:
 ```text
-01_database_schema.sql
-02_seed_sample_data.sql
+liane_library_database:schemas.sql
+liane_library_seed_10.sql
 ```
 ### 4️⃣ Create a Streamlit secrets file
 Create a `.streamlit/secrets.toml` file in the project root:
