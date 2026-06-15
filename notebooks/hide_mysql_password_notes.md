@@ -1,15 +1,6 @@
 cat > notebooks/hide_mysql_password_notes.md << 'EOF'
 # How to Hide MySQL Password in Streamlit
 
-## Why hide the password?
-
-Do not write the real MySQL password directly inside `app.py`.
-
-Bad example:
-
-```python
-password = "my_real_password"
-
 lianes_library_app/
 │
 ├── .streamlit/
@@ -20,7 +11,8 @@ lianes_library_app/
 │
 └── notebooks/
     └── hide_mysql_password_notes.md
-    
+
+-- Do not write the real MySQL password directly inside `app.py`.
 -- The .streamlit folder must be in the project root, not inside src.
 
 
