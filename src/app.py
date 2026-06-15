@@ -83,7 +83,7 @@ if st.sidebar.button("⏰ Overdue Books"):
 # Delete / Deactivate section
 # -----------------------------
 st.sidebar.markdown("---")
-st.sidebar.subheader("🚫 Delete / Deactivate")
+st.sidebar.subheader("🚫 Delete Records")
 
 if st.sidebar.button("🗑️ Delete Book"):
     st.session_state.menu = "Delete Book"
@@ -444,7 +444,7 @@ elif menu == "Overdue Books":
     if overdue_df.empty:
         st.success("No overdue books.")
     else:
-        st.dataframe(overdue_df, hide_index="True", width="stretch")
+        st.dataframe(overdue_df, hide_index= True, width="stretch")
 
 
 
