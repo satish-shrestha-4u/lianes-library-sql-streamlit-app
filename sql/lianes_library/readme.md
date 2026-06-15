@@ -1,21 +1,18 @@
-# Advanced SQL Practice
+# Liane's Library SQL Files
 
-This folder contains advanced SQL practice files completed before applying SQL concepts to the Liane's Library project.
+This folder contains the main SQL files for the Liane's Library database.
 
-These files use separate practice datasets and are included to show the SQL concepts covered during the advanced SQL module.
+## Files
 
-## Topics Covered
+- `liane_library_database:schemas.sql` — creates the database tables and relationships
+- `liane_library_seed_10.sql` — adds sample data for books, friends, and loans
 
-- SQL recap queries
-- Pivot queries
-- Subqueries
-- Common Table Expressions
-- Temporary tables
-- Window functions
-- Views
-- Stored procedures
-- SQL functions
+## Purpose
 
-## Note
+These files create the MySQL database used by the Python and Streamlit app.
 
-These files are not part of the Liane's Library database. They are included as supporting SQL practice material.
+Run the files in this order:
+
+```text
+01_database_schema.sql
+02_seed_sample_data.sql
