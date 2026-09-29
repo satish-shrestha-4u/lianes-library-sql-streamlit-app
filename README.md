@@ -68,6 +68,10 @@ Streamlit web application
 - 🌐 Streamlit - web interface
 - 🔌 PyMySQL — MySQL driver for Python
 
+##. 🚀 Live App
+
+[👉 Open Liane's Library][https://lianes-library-app.streamlit.app/]
+
 ## 📁 Repository Structure
 
 ```text
