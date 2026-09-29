@@ -10,11 +10,21 @@ from datetime import date, timedelta
 
 mysql_config = st.secrets["mysql"]
 
-schema = mysql_config["database"]
-host = mysql_config["host"]
-user = mysql_config["user"]
-password = quote_plus(mysql_config["password"])
-port = mysql_config["port"]
+if "host" in mysql_config:
+    # Streamlit Cloud → Aiven MySQL
+    schema = mysql_config["database"]
+    host = mysql_config["host"]
+    user = mysql_config["user"]
+    password = quote_plus(mysql_config["password"])
+    port = mysql_config["port"]
+
+else:
+    # Local MySQL
+    schema = "liane_library"
+    host = "127.0.0.1"
+    user = "root"
+    password = quote_plus(mysql_config["password"])
+    port = 3306
 
 connection_string = (
     f"mysql+pymysql://{user}:{password}@{host}:{port}/{schema}"
@@ -24,7 +34,6 @@ engine = create_engine(
     connection_string,
     pool_pre_ping=True
 )
-
 
 # -----------------------------
 # Helper functions 
