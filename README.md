@@ -4,6 +4,10 @@ A personal library management system built with  **MySQL**, **Python**, **SQLAlc
 
 This project demonstrates a full SQL-to-application workflow using a library management case study. It includes database design, advanced SQL querying, connecting a SQL database with Python, and building a Streamlit app to interact with the library data.
 
+##. 🚀 Live App
+
+[👉 Open Liane's Library][https://lianes-library-app.streamlit.app/]
+
 ## 📌 Project Overview
 
 Liane is an avid reader with a large personal book collection. She enjoys lending books to friends, colleagues, and acquaintances, but over time, she started losing track of who borrowed which book.
@@ -68,9 +72,6 @@ Streamlit web application
 - 🌐 Streamlit - web interface
 - 🔌 PyMySQL — MySQL driver for Python
 
-##. 🚀 Live App
-
-[👉 Open Liane's Library][https://lianes-library-app.streamlit.app/]
 
 ## 📁 Repository Structure
 
