@@ -1,39 +1,40 @@
 # 📚 Liane's Library
 
-A personal library management system built with  **MySQL**, **Python**, **SQLAlchemy**, and **Streamlit**.
+A personal library management application built with  **MySQL**, **Python**, **Pandas**, **SQLAlchemy**, and **Streamlit**.
 
-This project demonstrates a full SQL-to-application workflow using a library management case study. It includes database design, advanced SQL querying, connecting a SQL database with Python, and building a Streamlit app to interact with the library data.
+This project demonstrates an end-to-end SQL-to-application workflow using a library management case study. It includes database design, advanced SQL querying, connecting a SQL database with Python, and building a Streamlit app to interact with the library data.
+
 
 # 🚀 Live App
 
-[👉 Open Liane's Library][https://lianes-library-app.streamlit.app/]
+[👉 Open Liane's Library](https://lianes-library-app.streamlit.app/)
+
 
 ## 📌 Project Overview
 
-Liane is an avid reader with a large personal book collection. She enjoys lending books to friends, colleagues, and acquaintances, but over time, she started losing track of who borrowed which book.
-
-The goal of this project is to create a simple library management system that helps Liane manage her collection, track loans, check book availability, and reduce the risk of books going unreturned.
-
-## 🎯 The Problem
-Liane wants to continue sharing her books, but she needs a better way to:
-- track all books in her collection
-- record who borrowed each book
-- check which books are currently unavailable
-- identify overdue loans
-- manage borrowers without using complicated tools
+Liane manages a large personal book collection and regularly lends books to friends and acquaintances, but over time, she started losing track of who borrowed which books. 
+The goal of this project is to build a simple library management system for managing books, borrowers, and loans while keeping track of availability and reducing the risk of books going unreturned.
 
 ## 💡 The Solution
 
 This project provides a simple database-backed web application that allows Liane to manage her personal library through an easy-to-use Streamlit interface.
 
-The system connects a MySQL database with Python and Streamlit, enabling users to view, add, update, and manage library data without directly working with SQL commands.
+The system connects a MySQL database with Python and Streamlit, enabling her to view, add, update, and manage library data without directly working with SQL commands.
 
-## 🔄 Workflow
+The application allows her to:
+- 📚 View and manage books
+- 👥 Manage borrowers
+- 🔄 Track borrowing records
+- ✅ Check book availability
+- ⏰ Identify overdue loans
+
+
+## 🏗️ Project Architecture
 
 ```text
 Database design
         ↓
-SQL schema creation
+SQL schema creation & Relationships
         ↓
 Table creation and sample data insertion
         ↓
@@ -50,20 +51,19 @@ Streamlit web application
 
 - 🗄️ Relational database design
 - 🧱 SQL schema creation
-- 🔑 Primary keys and foreign keys
-- 🔗 Table relationships
-- 📊 Advanced SQL queries
+- 🔑 Primary and foreign keys
+- 🔗 Table relationships and joins
 - 🔍 Joins, filtering, and aggregations
 - 🧮 Subqueries, CTEs, and temporary tables
 - 🪟 Window functions
-- ⚙️ Views, Stored procedures and SQL functions
-- 🐍 Connecting SQL with Python
+- ⚙️ Views, stored procedures and SQL functions
+- 🐍 Python–SQL integration
 - 🔗 SQLAlchemy database connection
-- 🐼 Reading SQL results into Pandas
-- 🌐 Building a Streamlit interface
+- 🐼 Pandas data processing
+- 🌐 Streamlit application development
 - 🧪 Local database workflow
 
-## 🛠️ Tools Used
+## 🛠️ Technologies
 
 - 🐬 MySQL - database
 - 🐍 Python - core programming language
@@ -80,7 +80,7 @@ sql/              SQL schema, sample data, and advanced SQL practice files
 src/              Streamlit application files
 notebooks/        SQL and Python connection notebooks
 .gitignore        Files excluded from GitHub, including secrets
-requirements.txt  Python package requirements
+requirements.txt  Python dependencies
 ```
 
 ## 🧩 Project Components
@@ -91,41 +91,35 @@ The SQL part of the project contains the database structure, table creation scri
 
 ### 🐍 Python
 
-The Python part focuses on connecting to the SQL database, executing queries, and working with query results in Pandas.
+Python connects the application to MySQL using SQLAlchemy, executes SQL queries, and processes results with Pandas.
 
-### 🌐 Streamlit App
+### 🌐 Streamlit Application
 
 The Streamlit app provides a simple interface for interacting with the library data, such as viewing books, checking availability, and managing borrowing records.
 
-## 🚀 How to Run
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/YOUR_USERNAME/lianes-library-sql-streamlit-app.git
-cd lianes-library-sql-streamlit-app
-```
-### 2️⃣ Create and activate the environment
-```bash
-conda create -n lianes-library-env -c conda-forge python=3.12 streamlit sqlalchemy pandas pymysql python-dotenv
-conda activate lianes-library-env
-```
-### 3️⃣ Set up the MySQL database
-Create a MySQL database and run the SQL files in the `sql/lianes_library/` folder:
+## 🚀 Run Locally
 ```text
-liane_library_database:schemas.sql
-liane_library_seed_10.sql
-```
-### 4️⃣ Create a Streamlit secrets file
-Create a `.streamlit/secrets.toml` file in the project root:
+git clone https://github.com/satish-shrestha-4u/lianes-library-sql-streamlit-app
+cd lianes-library-sql-streamlit-app
 
+conda create -n lianes-library-env -c conda-forge python=3.12
+conda activate lianes-library-env
+
+pip install -r requirements.txt
+```
+Create the MySQL database and run the SQL files in:
+```text
+sql/lianes_library/
+```
+Configure the required database credentials in:
 ```text
 .streamlit/secrets.toml
 ```
-
-### 5️⃣ Run the Streamlit app
-```bash
+Then run:
+```text
 streamlit run src/app.py
 ```
 
 ## ✅ Purpose
 
-This project demonstrates my ability to work across the data application workflow: designing relational data, writing SQL queries, connecting databases with Python, and building a small interactive application using Streamlit.
+This project demonstrates my ability to work across the complete data application workflow: designing relational databases, writing advanced SQL queries, connecting databases with Python, processing data, and building an interactive application with Streamlit.
